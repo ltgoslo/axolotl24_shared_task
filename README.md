@@ -1,5 +1,4 @@
 # AXOLOTL-24 Shared Task
-![Axolotl24](axolotl24.png)
 
 AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time_"
 
@@ -10,6 +9,8 @@ This Github repository will serve as the main information hub for the shared tas
 
 ---
 
+<img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">
+
 ## Organizers
 - [Mariia Fedorova](https://www.mn.uio.no/ifi/english/people/aca/mariiaf/) (University of Oslo)
 - [Andrey Kutuzov](https://www.mn.uio.no/ifi/english/people/aca/andreku/) (University of Oslo)
@@ -17,12 +18,12 @@ This Github repository will serve as the main information hub for the shared tas
 - [Niko Partanen](https://researchportal.helsinki.fi/en/persons/niko-partanen) (University of Helsinki)
 - [Janine Siewert](https://researchportal.helsinki.fi/en/persons/janine-siewert) (University of Helsinki)
 
-## Timeline (all dates preliminary)
-- February 1 2024 - training data published
-- March 25 2024 - test data published
-- April 9 2024 - deadline for submission of the systems’ predictions
-- April 10 2024 - AXOLOTL'24 test results published
-- May 10 - paper submission deadline (same procedure as with other LChange'24 papers)
+## Timeline
+- **February 1 2024** - training data published
+- **March 25 2024** - test data published
+- **April 9 2024** - deadline for submission of the systems’ predictions
+- **April 10 2024** - AXOLOTL'24 test results published
+- **May 10 2024** - paper submission deadline (same procedure as with other LChange'24 papers)
 
 ## Introduction
 In this shared task, we challenge the participants to implement a semantic change modeling system which, given two historical corpora and a sense inventory corresponding to one of the periods, is able to:
@@ -56,8 +57,14 @@ This subtask challenges the participants to submit good **descriptions/definitio
 
 * **Inputs**: Same as subtask 1
 * **Predictions**: Same as subtask 1 plus a **dictionary-like definition for every novel sense of the target word** (a sense not present in the dictionary entry from the first time period)
-* Metrics: BLEU/ROUGE and BERTScore. The final score is the average across all sense definitions the system generated (for one target word).
+* **Metrics**: BLEU/ROUGE and BERTScore. The final score is averaged across target words
 * **Ground truth**: definitions from our gold standard sense inventories
+
+## References
+1. [Diachronic word embeddings and semantic shifts: a survey](https://aclanthology.org/C18-1117/) (Kutuzov et al., COLING 2018)
+2. [Computational approaches to semantic change](https://zenodo.org/records/5040241) (Tahmasebi et al., LangSci Press 2021)
+3. [Semeval-2022 Task 1: CODWOE – Comparing Dictionaries and Word Embeddings](https://aclanthology.org/2022.semeval-1.1/) (Mickus et al., SemEval 2022)
+4. [Interpretable Word Sense Representations via Definition Generation: The Case of Semantic Change Analysis](https://aclanthology.org/2023.acl-long.176/) (Giulianelli et al., ACL 2023)
 
 ---
 
