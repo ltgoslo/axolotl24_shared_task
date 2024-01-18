@@ -1,4 +1,4 @@
-# AXOLOTL-24 Shared Task
+# AXOLOTL-24 Shared Task on Explainable Semantic Change Modeling
 
 AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time at LChange'24_"
 
@@ -36,7 +36,8 @@ Thus, the task is to  identify which exact senses were gained between two time p
 
 To be able to use high-quality gold data, we use a simplified setup where instead of asking the participants to retrieve and analyze all target word usages in raw corpora, we provide two manually checked sets of usage examples (still of considerable size). Below, we still call them "corpora", for clarity
 
-The shared task will feature data from **Finnish** and **Russian** languages. There will also  be a **surprise language** of lesser size at the test stage. For all these languages, we will use gold, manually annotated data to evaluate the predictions of the participant systems.
+The shared task will feature data from **Finnish** and **Russian** languages, but you do not have to speak these languages to participate. 
+There will also  be a **surprise language** of lesser size at the test stage. For all these languages, we will use gold, manually annotated data to evaluate the predictions of the participant systems.
 
 The shared task will consist of two subtasks. The participants are welcome to choose one of them or both, at their will.
 
