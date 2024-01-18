@@ -1,6 +1,6 @@
 # AXOLOTL-24 Shared Task
 
-AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time_"
+AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time at LChange'24_"
 
 **It is a shared task in explainable semantic change modeling, collocated with the 
 [5th International Workshop on Computational Approaches to Historical Language Change 2024 (LChange'24)](https://www.changeiskey.org/event/2024-acl-lchange/).**
