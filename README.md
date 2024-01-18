@@ -28,7 +28,10 @@ If you are interested in this shared task, please also [join our Google Group](h
 - **May 10 2024** - paper submission deadline (same procedure as with other LChange'24 papers)
 
 ## Introduction
-In this shared task, we challenge the participants to implement a semantic change modeling system which, given two historical corpora and a sense inventory corresponding to one of the periods, is able to:
+This shared task builds on the existing tradition of competitions in diachronic semantic change detection, like ([Schlechtweg et al 2020](https://aclanthology.org/2020.semeval-1.1/)) and many others. 
+However, this time we focus on _explaining_ diachronic semantic changes, even if on a very basic level (for now).
+
+In particular, we challenge the participants to implement a semantic change modeling system which, given two historical corpora and a sense inventory corresponding to one of the periods, is able to:
 1. Find the target word usages associated with **new, gained senses** 
 2. **Describe these senses** in a way that facilitates understanding and lexicographical research.
 
@@ -65,9 +68,10 @@ This subtask challenges the participants to submit good **descriptions/definitio
 
 ## References
 1. [Diachronic word embeddings and semantic shifts: a survey](https://aclanthology.org/C18-1117/) (Kutuzov et al., COLING 2018)
-2. [Computational approaches to semantic change](https://zenodo.org/records/5040241) (Tahmasebi et al., LangSci Press 2021)
-3. [Semeval-2022 Task 1: CODWOE – Comparing Dictionaries and Word Embeddings](https://aclanthology.org/2022.semeval-1.1/) (Mickus et al., SemEval 2022)
-4. [Interpretable Word Sense Representations via Definition Generation: The Case of Semantic Change Analysis](https://aclanthology.org/2023.acl-long.176/) (Giulianelli et al., ACL 2023)
+2. [SemEval-2020 Task 1: Unsupervised Lexical Semantic Change Detection](https://aclanthology.org/2020.semeval-1.1/) (Schlechtweg et al., SemEval 2020)
+3. [Computational approaches to semantic change](https://zenodo.org/records/5040241) (Tahmasebi et al., LangSci Press 2021)
+4. [Semeval-2022 Task 1: CODWOE – Comparing Dictionaries and Word Embeddings](https://aclanthology.org/2022.semeval-1.1/) (Mickus et al., SemEval 2022)
+5. [Interpretable Word Sense Representations via Definition Generation: The Case of Semantic Change Analysis](https://aclanthology.org/2023.acl-long.176/) (Giulianelli et al., ACL 2023)
 
 ---
 
