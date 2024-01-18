@@ -7,6 +7,8 @@ AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time
 
 This Github repository will serve as the main information hub for the shared task. Example of the datasets, processing and evaluation scripts, etc will appear here in due time according to the timeline below. 
 
+If you are interested in this shared task, please also [join our Google Group](https://groups.google.com/g/axolotl-24/).
+
 ---
 
 <img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">
