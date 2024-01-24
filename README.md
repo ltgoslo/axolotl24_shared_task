@@ -19,6 +19,7 @@ If you are interested in this shared task, please also [join our Google Group](h
 - [Timothee Mickus](https://timotheemickus.github.io/) (University of Helsinki)
 - [Niko Partanen](https://researchportal.helsinki.fi/en/persons/niko-partanen) (University of Helsinki)
 - [Janine Siewert](https://researchportal.helsinki.fi/en/persons/janine-siewert) (University of Helsinki)
+- [Elena Spaziani](https://phd.uniroma1.it/web/ELENA-SPAZIANI_nP1755394_EN.aspx) (Sapienza University Rome)
 
 ## Timeline
 - **February 1 2024** - training data published
