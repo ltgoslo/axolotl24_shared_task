@@ -4,10 +4,11 @@ AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time
 
 **It is a shared task in explainable semantic change modeling, collocated with the 
 [5th International Workshop on Computational Approaches to Historical Language Change 2024 (LChange'24)](https://www.changeiskey.org/event/2024-acl-lchange/).**
-
-This Github repository will serve as the main information hub for the shared task. Example of the datasets, processing and evaluation scripts, etc will appear here in due time according to the timeline below. 
+This GitHub repository serves as the main information hub for AXOLOTL. 
 
 If you are interested in this shared task, please also [join our Google Group](https://groups.google.com/g/axolotl-24/).
+
+- **[Training and development data](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/data)** (Finnish and Russian)
 
 ---
 
@@ -40,10 +41,10 @@ Thus, the task is to  identify which exact senses were gained between two time p
 
 To be able to use high-quality gold data, we use a simplified setup where instead of asking the participants to retrieve and analyze all target word usages in raw corpora, we provide two manually checked sets of usage examples (still of considerable size). Below, we still call them "corpora", for clarity
 
-The shared task will feature data from **Finnish** and **Russian** languages, but you do not have to speak these languages to participate. 
-There will also  be a **surprise language** of lesser size at the test stage. For all these languages, we will use gold, manually annotated data to evaluate the predictions of the participant systems.
+The shared task features data from **Finnish** and **Russian** languages, but you do not have to speak these languages to participate. 
+There will also  be a **surprise language** of lesser size at the test stage. For all these languages, we are using gold, manually annotated data to evaluate the predictions of the participant systems.
 
-The shared task will consist of two subtasks. The participants are welcome to choose one of them or both, at their will.
+The shared task consists of two subtasks. The participants are welcome to choose one of them or both, at their will.
 
 ## Subtask 1. Bridging diachronic word uses and a synchronic dictionary
 
