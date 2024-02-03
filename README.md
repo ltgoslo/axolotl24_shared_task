@@ -22,7 +22,7 @@ If you are interested in this shared task, please also [join our Google Group](h
 - [Elena Spaziani](https://phd.uniroma1.it/web/ELENA-SPAZIANI_nP1755394_EN.aspx) (Sapienza University Rome)
 
 ## Timeline
-- **February 1 2024** - training data published
+- **February 4 2024** - training data published
 - **March 25 2024** - test data published
 - **April 9 2024** - deadline for submission of the systems’ predictions
 - **April 10 2024** - AXOLOTL'24 test results published
