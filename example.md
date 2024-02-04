@@ -36,7 +36,7 @@ Comparing the usages from the two time periods, we can notice that the _third_ a
 
 The performance of the system is evaluated by comparing its predictions with the gold data using Adjusted Rand Index (ARI) for all the usages from time period **B** and macro F1 score for all **B** usages with senses already existing in **A**.
 
-See our evaluation scripts for more details.
+See [our evaluation scripts](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/code/evaluation) for more details.
 
 ## Subtask 2
 The second subtask involves the creation of **dictionary-like definitions** for the **novel (gained) senses** of every target word.
@@ -53,5 +53,5 @@ Since the usages of the predicted novel sense `cell_3` are all referring to a co
 The performance of the system is evaluated with BLEU and BertScore, comparing the generated definitions to the gold ones from manually annotated data.
 The generated definitions are mapped to the gold ones by maximizing their BertScore similarity.
 
-See our evaluation scripts for more details.
+See [our evaluation scripts](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/code/evaluation) for more details.
 
