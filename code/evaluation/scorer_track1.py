@@ -21,6 +21,7 @@ if __name__ == "__main__":
         help="Path to the TSV file with system predictions",
         required=True,
     )
+    arg("--output", "-o", help="Path to the output file", default="track1_out.txt")
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -33,8 +34,8 @@ if __name__ == "__main__":
 
     assert len(gold_data) == len(predictions)
     assert (
-        gold_data[gold_data.period == "new"].example.tolist()
-        == predictions[predictions.period == "new"].example.tolist()
+            gold_data[gold_data.period == "new"].example.tolist()
+            == predictions[predictions.period == "new"].example.tolist()
     )
 
     logger.info(f"Data loaded from {args.gold} and {args.pred}")
@@ -47,17 +48,17 @@ if __name__ == "__main__":
     for targetword in tqdm(gold_data.word.unique()):
         gold_senses = gold_data[
             (gold_data.word == targetword) & (gold_data.period == "new")
-        ].sense_id.values
+            ].sense_id.values
         pred_senses = predictions[
             (predictions.word == targetword) & (predictions.period == "new")
-        ].sense_id.values
+            ].sense_id.values
         ari = adjusted_rand_score(gold_senses, pred_senses)
         ari_scores.append(ari)
         logger.debug(f"ARI for {targetword}: {ari}")
         old_senses = set(
             gold_data[(gold_data.word == targetword) & (gold_data.period == "old")]
-            .sense_id.unique()
-            .tolist()
+                .sense_id.unique()
+                .tolist()
         )
         if len(old_senses) == 0:
             logger.info(f"Not computing F1 for {targetword}: no old senses")
@@ -66,14 +67,14 @@ if __name__ == "__main__":
             (gold_data.word == targetword)
             & (gold_data.period == "new")
             & (gold_data.sense_id.isin(old_senses))
-        ]
+            ]
         test_usages_ids = set(test_usages.usage_id.tolist())
         if len(test_usages) == 0:
             test_usages_predicted = predictions[
                 (predictions.word == targetword)
                 & (predictions.period == "new")
                 & (predictions.sense_id.isin(old_senses))
-            ]
+                ]
             if len(test_usages_predicted) == 0:
                 f1_scores.append(1.0)
                 logger.info(
@@ -88,7 +89,6 @@ if __name__ == "__main__":
                 )
             continue
         test_usages_gold_senses = test_usages.sense_id.tolist()
-        test_indices = test_usages.index.tolist()
         test_usages_predictions = predictions[predictions.usage_id.isin(test_usages_ids)]
         test_usages_predicted_senses = test_usages_predictions.sense_id.tolist()
         assert len(test_usages_gold_senses) == len(test_usages_predicted_senses)
@@ -113,3 +113,7 @@ if __name__ == "__main__":
     logger.info(
         f"Average macro-F1 across {len(f1_scores)} target words: {average_f1:0.3f}"
     )
+
+    with open(args.output, "w") as out:
+        print(f"ARI: {average_ari:0.3f}", file=out)
+        print(f"F1: {average_f1:0.3f}", file=out)
