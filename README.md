@@ -9,6 +9,7 @@ This GitHub repository serves as the main information hub for AXOLOTL.
 If you are interested in this shared task, please also [join our Google Group](https://groups.google.com/g/axolotl-24/).
 
 - **[Training and development data](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/data)** (Finnish and Russian)
+- **[Details of the task in one English example](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/example.md)**
 
 ---
 

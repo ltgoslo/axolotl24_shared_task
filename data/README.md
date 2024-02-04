@@ -48,3 +48,5 @@ will never occur in the development and test sets, and vice versa.
 
 Future updates of the provided Finnish dataset will include manually verified character offsets for the headword in its example of usage in the development sets (both period). 
 The corresponding version update is expected to be released on February 9th, 2024.
+
+Russian datasets will be further cleaned and filtered throughout February. The data format will remain the same.
