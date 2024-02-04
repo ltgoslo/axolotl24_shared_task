@@ -67,6 +67,7 @@ if __name__ == "__main__":
             & (gold_data.period == "new")
             & (gold_data.sense_id.isin(old_senses))
         ]
+        test_usages_ids = set(test_usages.usage_id.tolist())
         if len(test_usages) == 0:
             test_usages_predicted = predictions[
                 (predictions.word == targetword)
@@ -88,7 +89,7 @@ if __name__ == "__main__":
             continue
         test_usages_gold_senses = test_usages.sense_id.tolist()
         test_indices = test_usages.index.tolist()
-        test_usages_predictions = predictions.iloc[test_indices]
+        test_usages_predictions = predictions[predictions.usage_id.isin(test_usages_ids)]
         test_usages_predicted_senses = test_usages_predictions.sense_id.tolist()
         assert len(test_usages_gold_senses) == len(test_usages_predicted_senses)
         test_usages_predicted_senses = [

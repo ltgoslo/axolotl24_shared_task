@@ -94,7 +94,6 @@ else:
 
 if verbose:
     import pprint
-
     pprint.pprint(scores)
 
 with open(args.output, "w") as ostr:
