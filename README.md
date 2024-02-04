@@ -6,6 +6,8 @@ AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time
 [5th International Workshop on Computational Approaches to Historical Language Change 2024 (LChange'24)](https://www.changeiskey.org/event/2024-acl-lchange/).**
 This GitHub repository serves as the main information hub for AXOLOTL. 
 
+<img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">
+
 If you are interested in this shared task, please also [join our Google Group](https://groups.google.com/g/axolotl-24/).
 
 - **[Training and development data](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/data)** (Finnish and Russian)
@@ -14,7 +16,6 @@ If you are interested in this shared task, please also [join our Google Group](h
 - **[Baselines](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/code/baselines)**
 
 ---
-<img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">
 
 ## Organizers
 - [Mariia Fedorova](https://www.mn.uio.no/ifi/english/people/aca/mariiaf/) (University of Oslo)
