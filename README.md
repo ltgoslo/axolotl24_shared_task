@@ -11,6 +11,7 @@ If you are interested in this shared task, please also [join our Google Group](h
 - **[Training and development data](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/data)** (Finnish and Russian)
 - **[Details of the task in one English example](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/example.md)**
 - **[Evaluation scripts](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/code/evaluation)**
+- **[Baselines](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/code/baselines)**
 
 ---
 <img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">

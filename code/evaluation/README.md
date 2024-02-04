@@ -6,7 +6,8 @@
 python3 eval_subtask1.py --gold GOLD_DATA.tsv --pred PREDICTIONS.tsv
 ```
 
-Results
+### Baseline results
+[baseline code](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/code/baselines)
 
 | Language     | ARI   | Macro F1 |
 |--------------|-------|----------|
