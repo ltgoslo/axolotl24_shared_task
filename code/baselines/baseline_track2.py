@@ -49,13 +49,13 @@ dataset_ = (
     .apply(list)
     .reset_index()
 )
-indices = (
+target_indices = (
     dataset[["sense_id", "word", "gloss", "indices_target_token"]]
     .groupby(["sense_id", "gloss", "word"])["indices_target_token"]
     .apply(list)
     .reset_index()
 )["indices_target_token"]
-dataset_["indices_target_token"] = indices
+dataset_["indices_target_token"] = target_indices
 dataset = dataset_
 
 # we define an MLP to map context embeddings to model inputs
@@ -74,6 +74,26 @@ def safemean(q):
     return sum(q) / len(q)
 
 
+# helper function to retrieve the tokens corresponding to the headword in its token
+def make_headword_mask(inputs, indices):
+    mask = None
+    index = torch.arange(
+        inputs.input_ids.numel(), device=args.device
+    ).unsqueeze(0)
+    for idx_span in indices.split(";"):
+        fst_chr, lst_chr = map(int, idx_span.split(":"))
+        fst_tok = inputs.char_to_token(fst_chr)
+        lst_tok = inputs.char_to_token(lst_chr - 1)
+        if fst_tok is None or lst_tok is None:
+            return None
+        span_mask = ~((index >= fst_tok) & (index <= lst_tok))
+        if mask is None:
+            mask = span_mask.unsqueeze(-1)
+        else:
+            mask |= span_mask.unsqueeze(-1)
+    return mask
+
+
 # training loop.
 for epoch in tqdm.trange(5, desc="training"):
     with tqdm.trange(len(dataset), desc=f"train {epoch}") as pbar:
@@ -83,22 +103,16 @@ for epoch in tqdm.trange(5, desc="training"):
         def process(entry):
             optimizer.zero_grad()
             embeddings = []
-            for contexts, indices in zip(
+            for context, indices in zip(
                 entry["example"], entry["indices_target_token"]
             ):
                 inputs = tokenizer(
-                    contexts, padding=True, truncation=True, return_tensors="pt"
+                    context, padding=True, truncation=True, return_tensors="pt"
                 ).to(args.device)
-                fst_chr, lst_chr = map(int, indices.split(":"))
-                fst_tok = inputs.char_to_token(fst_chr)
-                lst_tok = inputs.char_to_token(lst_chr - 1)
-                index = torch.arange(
-                    inputs.input_ids.numel(), device=args.device
-                ).unsqueeze(0)
-                mask = ~((index >= fst_tok) & (index <= lst_tok)).unsqueeze(-1)
                 outputs = model(**inputs, output_hidden_states=True)["hidden_states"][
                     -1
                 ]
+                mask = make_headword_mask(inputs, indices)
                 headword_emb = outputs.masked_fill(mask, 0).sum(1)
                 context_emb = outputs.sum(1)
                 embeddings.append(torch.cat([headword_emb, context_emb], dim=-1))
@@ -172,12 +186,8 @@ with torch.no_grad(), tqdm.trange(len(test_dataset), desc="embed contexts") as p
         inputs = tokenizer(
             contexts, padding=True, truncation=True, return_tensors="pt"
         ).to(args.device)
-        fst_chr, lst_chr = map(int, entry["indices_target_token"].split(":"))
-        fst_tok = inputs.char_to_token(fst_chr)
-        lst_tok = inputs.char_to_token(lst_chr - 1)
-        index = torch.arange(inputs.input_ids.numel(), device=args.device).unsqueeze(0)
-        mask = ~((index >= fst_tok) & (index <= lst_tok)).unsqueeze(-1)
         outputs = model(**inputs, output_hidden_states=True)["hidden_states"][-1]
+        mask = make_headword_mask(inputs, entry["indices_target_token"])                
         headword_emb = outputs.masked_fill(mask, 0).sum(1).detach()
         context_emb = outputs.sum(1).detach()
         outputs = torch.cat([headword_emb, context_emb], dim=-1)
