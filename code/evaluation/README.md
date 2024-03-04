@@ -3,7 +3,7 @@
 ## Track 1
 
 ```commandline
-python3 eval_subtask1.py --gold GOLD_DATA.tsv --pred PREDICTIONS.tsv
+python3 scorer_track1.py --gold GOLD_DATA.tsv --pred PREDICTIONS.tsv
 ```
 
 ### Baseline results

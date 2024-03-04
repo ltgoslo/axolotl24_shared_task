@@ -13,7 +13,7 @@ python3 baseline_track1.py --test ../../data/axolotl.ru/axolotl.dev.ru.tsv --pre
 
 ```commandline
 cd ../evaluation/
-python3 eval_subtask1.py --gold ../../data/axolotl.ru/axolotl.dev.ru.tsv --pred ../baselines/pred_dev_ru.tsv
+python3 scorer_track1.py --gold ../../data/axolotl.ru/axolotl.dev.ru.tsv --pred ../baselines/pred_dev_ru.tsv
 ```
 
 ### Baseline results for track 1
@@ -62,7 +62,7 @@ python3 baseline_track2.py --train_data ../../data/axolotl.fi/axolotl.train.fi.t
 
 ```commandline
 cd ../evaluation/
-python3 eval_subtask1.py --gold ../../data/axolotl.fi/axolotl.dev.fi.tsv --pred ../baselines/pred_dev_fi.track2.tsv
+python3 scorer_track2.py --gold ../../data/axolotl.fi/axolotl.dev.fi.tsv --pred ../baselines/pred_dev_fi.track2.tsv
 ```
 
 -->
