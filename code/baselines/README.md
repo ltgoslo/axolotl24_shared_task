@@ -58,12 +58,14 @@ python3 baseline_track2.py --train_data ../../data/axolotl.fi/axolotl.train.fi.t
 
 ```
 
-### Evaluating results for track 2
+<!-- ### Evaluating results for track 2
 
 ```commandline
 cd ../evaluation/
 python3 eval_subtask1.py --gold ../../data/axolotl.fi/axolotl.dev.fi.tsv --pred ../baselines/pred_dev_fi.track2.tsv
 ```
+
+-->
 
 ### Baseline results for track 2
 
