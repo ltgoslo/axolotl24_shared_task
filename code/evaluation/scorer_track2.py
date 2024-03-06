@@ -21,6 +21,7 @@ args = p.parse_args()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 sub = pd.read_csv(args.submission, sep="\t")
+sub = sub.fillna("")
 ref = pd.read_csv(args.reference, sep="\t")
 old_senses = set(ref[ref.period == "old"].sense_id.unique())
 ref = ref[~ref.sense_id.apply(old_senses.__contains__)].reset_index()
@@ -94,6 +95,7 @@ else:
 
 if verbose:
     import pprint
+
     pprint.pprint(scores)
 
 with open(args.output, "w") as ostr:

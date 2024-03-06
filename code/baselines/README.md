@@ -71,15 +71,21 @@ python3 scorer_track2.py --gold ../../data/axolotl.fi/axolotl.dev.fi.tsv --pred 
 
 TBA
 
+
+| Language     | BLEU | BERTScore |
+|--------------|------|-----------|
+| Finnish, dev |      |           |
+| Russian, dev |      |           |
+
 ## How this baseline works
 
-**NB:** This baseline presupposes that you have added a sense ID prediction to the test split (i.e., that you have tried to cluster senses before attempting to explain them). See below for suggetsions on how to do without.
+**NB:** This baseline presupposes that you have added a sense ID prediction to the test split (i.e., that you have tried to cluster senses before attempting to explain them). See below for suggestions on how to do without.
 
 The baseline works by fine-tuning a large generative language model as follows:
 
 1. For every data point, get a context and headword embedding representations using this model;
 
-3. For every provided sense ID, group all relevant context and headword embeddings as inputs and use them prompt the model to generate the definition of a given sense.
+2. For every provided sense ID, group all relevant context and headword embeddings as inputs and use them prompt the model to generate the definition of a given sense.
 
 In other words, we do two sets of pass for each sense: the first set in step 1. allows us to retrieve input features, the second is meant to generate the actual definition.
 
