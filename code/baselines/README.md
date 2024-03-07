@@ -54,28 +54,25 @@ Feel free also to abandon this baseline at all and use methods other than calcul
 
 ```commandline
 cd scripts/baselines/
-python3 baseline_track2.py --train_data ../../data/axolotl.fi/axolotl.train.fi.tsv --test_data ../../data/axolotl.fi/axolotl.dev.fi.tsv --predictions_file ../baselines/pred_dev_fi.track2.tsv
+python3 baseline_track2.py --pretrain_data ../../data/axolotl.??/axolotl.train.??.tsv --train_data ../../data/axolotl.fi/axolotl.train.fi.tsv --test_data ../../data/axolotl.fi/axolotl.dev.fi.tsv --predictions_file ../baselines/pred_dev_fi.track2.tsv
 
 ```
 
-<!-- ### Evaluating results for track 2
+### Evaluating results for track 2
 
 ```commandline
 cd ../evaluation/
-python3 scorer_track2.py --gold ../../data/axolotl.fi/axolotl.dev.fi.tsv --pred ../baselines/pred_dev_fi.track2.tsv
+python3 scorer_track2.py ../baselines/pred_dev_fi.track2.tsv ../../data/axolotl.fi/axolotl.dev.fi.tsv scores.fi.txt
 ```
 
--->
 
 ### Baseline results for track 2
 
-TBA
 
-
-| Language     | BLEU | BERTScore |
-|--------------|------|-----------|
-| Finnish, dev |      |           |
-| Russian, dev |      |           |
+| Language     | BLEU  | BERTScore |
+|--------------|-------|-----------|
+| Finnish, dev | 0.248 | 0.607     |
+| Russian, dev | 0.886 | 0.595     |
 
 ## How this baseline works
 
@@ -88,8 +85,10 @@ The baseline works by fine-tuning a large generative language model as follows:
 2. For every provided sense ID, group all relevant context and headword embeddings as inputs and use them prompt the model to generate the definition of a given sense.
 
 In other words, we do two sets of pass for each sense: the first set in step 1. allows us to retrieve input features, the second is meant to generate the actual definition.
+To overcome data limitations
 
-This baseline is highly speculative and may or may not be a good idea. Feel free to improve on it in any way you see fit. You could for instance:
+This baseline is _highly speculative_ and is most likely **not** a good idea. It is meant to showcase how to use the data, rather than how to solve the task.
+Feel free to improve on it in any way you see fit. You could for instance:
 - rely on a separate model for encoding context and headword embeddings;
 - consider using a sequence-to-sequence encoder-decoder architecture (e.g. mBART) instead of the GPT-like model we used;
 - abandon this baseline altogether and devlop a completely different approach.
