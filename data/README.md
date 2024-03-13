@@ -14,12 +14,10 @@ each mapped to a target headword, its sense ID, and a definition gloss in modern
 
 ## Russian
 
-1. `axolotl.train.ru.tsv`: a training set of 2 514 Russian usages dated XIX. century and 5 478 Russian modern usages,
-each mapped to a target headword, its sense ID, and a definition gloss in XIX. century (if many modern senses were mapped to the same old one) or modern Russian (if exactly one sense was mapped to an old one)
-(unlike in the Finnish data, some usage examples for the XIX. century are missing or noisy)
-2. `axolotl.dev.ru.tsv`: a development set of 530 Russian usages dated XIX. century and 1 939 Russian modern usages,
-each mapped to a target headword, its sense ID, and a definition gloss in XIX. century (if many modern senses were mapped to the same old one) or modern Russian (if exactly one sense was mapped to an old one)
-(unlike in the Finnish data, some usage examples for the XIX. century are missing or noisy)
+1. `axolotl.train.ru.tsv`: a training set of 1 913 Russian usages dated XIX century and 4 600 Russian modern usages, each mapped to a target headword, its sense ID, and a definition gloss in XIX century (if many modern senses were mapped to the same old one) or modern Russian (if exactly one sense was mapped to an old one)
+(unlike in the Finnish data, some usage examples for the XIX century are missing or noisy)
+2. `axolotl.dev.ru.tsv`: a development set of 421 Russian usages dated XIX century and 1 637 Russian modern usages, each mapped to a target headword, its sense ID, and a definition gloss in XIX century (if many modern senses were mapped to the same old one) or modern Russian (if exactly one sense was mapped to an old one)
+(unlike in the Finnish data, some usage examples for the XIX century are missing or noisy)
 
 
 ## Training and development sets structure
@@ -38,7 +36,7 @@ The files contain 9 named columns, as follows:
 - `indices_target_token`: automatically produced character offsets for the headword in its usage example of usage, if applicable 
 - `date` a coarse-grained date of attestation of the usage example (year, if applicable)
 - `period`: indicator of the usage example belonging to the first ("old") or the second ("new") time period; 
-thus, can take either the value of "old" or the value of "new". 
+thus, can take either the value of "**old**" or the value of "**new**". 
 
 When the test splits will be published, their `sense_id` and `gloss` fields will be empty for the usages from the "new" time period.
 The participants will have to fill in the `sense_id` values in Subtask 1 and the definitions for the novel senses in Subtask 2. 
@@ -47,10 +45,3 @@ The Finnish datapoints are split depending on whether examples of usage were tak
 
 Note that headwords (target words) are split-specific, that is, a target word occurring in the training set, 
 will never occur in the development and test sets, and vice versa.
-
-## Expected future updates
-
-Future updates of the provided Finnish dataset will include manually verified character offsets for the headword in its example of usage in the development sets (both period). 
-The corresponding version update is expected to be released on February 9th, 2024.
-
-Russian datasets will be further cleaned and filtered throughout February. The data format will remain the same.
