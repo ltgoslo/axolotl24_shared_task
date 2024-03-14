@@ -29,13 +29,21 @@ def parse_args():
     arg("--pred", help="Path to the TSV file with system predictions", required=True)
     arg("--model", help="Sentence embedding model", default="setu4993/LEALLA-large")
     arg("--st", help="Similarity threshold", type=float, default=0.3)
+    arg(
+        "--device",
+        default=(
+            torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
+        ),
+        type=torch.device,
+        help="Device to load the model on.",
+    )
     return parser.parse_args()
 
 
 def load_model(arguments):
     logging.info(f"Loading model {arguments.model} for sentence embeddings")
     tokenizer = AutoTokenizer.from_pretrained(arguments.model)
-    model = AutoModel.from_pretrained(arguments.model)
+    model = AutoModel.from_pretrained(arguments.model).to(arguments.device)
     model = model.eval()
     logging.info(f"Loaded model {arguments.model}")
     return tokenizer, model
@@ -66,16 +74,16 @@ def main():
             "truncation": True,
             "max_length": 256,
         }
-        new_inputs = tokenizer(new_examples, **tokenizer_kwargs)
-        old_inputs = tokenizer(old_glosses, **tokenizer_kwargs)
+        new_inputs = tokenizer(new_examples, **tokenizer_kwargs).to(args.device)
+        old_inputs = tokenizer(old_glosses, **tokenizer_kwargs).to(args.device)
         with torch.no_grad():
             new_outputs = model(**new_inputs).pooler_output
             old_outputs = model(**old_inputs).pooler_output
 
         # Clustering the new representations in order to get new senses
-
+        old_outputs = old_outputs.cpu()
         ap = AffinityPropagation(random_state=42)
-        new_numpy = new_outputs.detach().numpy()
+        new_numpy = new_outputs.detach().cpu().numpy()
         clustering = ap.fit(new_numpy)
 
         # Aligning the old and new senses
