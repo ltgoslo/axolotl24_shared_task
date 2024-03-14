@@ -14,10 +14,8 @@ each mapped to a target headword, its sense ID, and a definition gloss in modern
 
 ## Russian
 
-1. `axolotl.train.ru.tsv`: a training set of 1 913 Russian usages dated XIX century and 4 600 Russian modern usages, each mapped to a target headword, its sense ID, and a definition gloss in XIX century (if many modern senses were mapped to the same old one) or modern Russian (if exactly one sense was mapped to an old one)
-(unlike in the Finnish data, some usage examples for the XIX century are missing or noisy)
-2. `axolotl.dev.ru.tsv`: a development set of 421 Russian usages dated XIX century and 1 637 Russian modern usages, each mapped to a target headword, its sense ID, and a definition gloss in XIX century (if many modern senses were mapped to the same old one) or modern Russian (if exactly one sense was mapped to an old one)
-(unlike in the Finnish data, some usage examples for the XIX century are missing or noisy)
+1. `axolotl.train.ru.tsv`: a training set of 1 913 Russian usages dated XIX century and 4 581 Russian modern usages, each mapped to a target headword, its sense ID, and a definition gloss in XIX century (if many modern senses were mapped to the same old one) or modern Russian (if exactly one sense was mapped to an old one) (unlike in the Finnish data, some usage examples for the XIX century are missing or noisy)
+2. `axolotl.dev.ru.tsv`: a development set of 421 Russian usages dated XIX century and 1 605 Russian modern usages, each mapped to a target headword, its sense ID, and a definition gloss in XIX century (if many modern senses were mapped to the same old one) or modern Russian (if exactly one sense was mapped to an old one) (unlike in the Finnish data, some usage examples for the XIX century are missing or noisy)
 
 
 ## Training and development sets structure
