@@ -14,6 +14,8 @@ If you are interested in this shared task, please also [join our low-volume mail
 - **[Details of the task in one English example](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/example.md)**
 - **[Evaluation scripts](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/code/evaluation)**
 - **[Baselines](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/code/baselines)**
+- **[Codalab competition for Subtask 1](https://codalab.lisn.upsaclay.fr/competitions/18009)**
+- **[Codalab competition for Subtask 2](https://codalab.lisn.upsaclay.fr/competitions/18008)**
 
 ---
 
@@ -51,6 +53,8 @@ The shared task consists of two subtasks. The participants are welcome to choose
 
 ## Subtask 1. Bridging diachronic word uses and a synchronic dictionary
 
+[Codalab competition for Subtask 1](https://codalab.lisn.upsaclay.fr/competitions/18009)
+
 The participants are offered two corpora, belonging to different time periods. In addition to this, they are provided with a set of **dictionary entries (sense inventories)** for the target words describing their senses in the **first** time period (accompanied by definitions). The task is to find usages of the target words belonging to **newly gained senses**, i.e., senses not covered by the provided sense inventory, as well as usages **belonging to the previously existing senses**.
 
 The assumption is that sense definitions from the dictionary, even though not always covering all word senses even from the same time period, may still be a useful additional source of information. The goal is to map word usages to the dictionary senses. This is very similar to **Word Sense Disambiguation**, with the difference being that the usages corresponding to word senses absent from the dictionary should be grouped into novel sense clusters (this is more similar to **Word Sense Induction**). In a way, this subtask is a mixture of WSD and WSI.
@@ -63,6 +67,8 @@ The assumption is that sense definitions from the dictionary, even though not al
 
 
 ## Subtask 2. Definition generation for novel word senses.
+
+[Codalab competition for Subtask 2](https://codalab.lisn.upsaclay.fr/competitions/18008)
 
 This subtask challenges the participants to submit good **descriptions/definitions for the novel senses** they found in subtask 1. The definitions can be generated from scratch or retrieved from existing ontologies: this is completely up to the participants. The organizers will map the predicted definitions to the gold standard ones and evaluate their quality with the standard NLG metrics.
 
