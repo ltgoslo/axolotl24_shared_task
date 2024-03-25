@@ -45,7 +45,7 @@ else:
     # wrongfully included / omitted words penalty
     iou = len(words_sub & words_ref) / len(words_sub | words_ref)
     bertscorer = evaluate.load("bertscore")
-    bleuscorer = BLEU(effective_order=True)
+    bleuscorer = BLEU(effective_order=True, smooth_method='exp')  # default smoothing, but I'm being explicit
     words = words_sub & words_ref
     records = []
     for word in words:
@@ -74,13 +74,13 @@ else:
             all_bert_scores[:, j] = -float("inf")
         summed_bleuscores = 0.0
         for i, j in alignments:
-            summed_bleuscores = bleuscorer.sentence_score(
+            summed_bleuscores += bleuscorer.sentence_score(
                 pred_novel_senses[i], [true_novel_senses[j]]
             ).score
         norm = max(n_true, n_pred) if normalize_penalty else len(alignments)
         records.append(
             {
-                "bleu": summed_bleuscores / norm,
+                "bleu": (summed_bleuscores / 100) / norm,
                 "bertscore": summed_bertscores / norm,
                 "IoU": iou,
                 "delta": abs(n_true - n_pred),
