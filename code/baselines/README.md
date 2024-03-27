@@ -21,7 +21,7 @@ python3 scorer_track1.py --gold ../../data/axolotl.ru/axolotl.dev.ru.tsv --pred 
 | Language     | ARI   | MACRO F1 |
 |--------------|-------|----------|
 | Finnish, dev | 0.022 | 0.222    |
-| Russian, dev | 0.073 | 0.280    |
+| Russian, dev | 0.098 | 0.274    |
 
 ## How this baseline works
 
