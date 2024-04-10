@@ -5,7 +5,7 @@ AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time
 **It is a shared task in explainable semantic change modeling, collocated with the 
 [5th International Workshop on Computational Approaches to Historical Language Change 2024 (LChange'24)](https://www.changeiskey.org/event/2024-acl-lchange/).**
 This GitHub repository serves as the main information hub for AXOLOTL. 
-**The test phase has finished now. the leaderboard will be published soon.**
+**The test phase has finished now. The leaderboard will be published soon.**
 
 <img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">
 
