@@ -5,12 +5,13 @@ AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time
 **It is a shared task in explainable semantic change modeling, collocated with the 
 [5th International Workshop on Computational Approaches to Historical Language Change 2024 (LChange'24)](https://www.changeiskey.org/event/2024-acl-lchange/).**
 This GitHub repository serves as the main information hub for AXOLOTL. 
-**The test phase has finished now. The leaderboard will be published soon.**
+**The test phase has finished now. The leaderboards are [published](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/results).**
 
 <img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">
 
 If you are interested in this shared task, please also [join our low-volume mailing list on Google Groups](https://groups.google.com/g/axolotl-24/about).
 
+- **[Results](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/results)**
 - **[Training and development data](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/data)** (Finnish and Russian)
 - **[Test data](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/data/test)** (Finnish, Russian and German)
 - **[Details of the task in one English example](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/example.md)**
