@@ -5,7 +5,7 @@ AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time
 **It is a shared task in explainable semantic change modeling, collocated with the 
 [5th International Workshop on Computational Approaches to Historical Language Change 2024 (LChange'24)](https://www.changeiskey.org/event/2024-acl-lchange/).**
 This GitHub repository serves as the main information hub for AXOLOTL. 
-**We are in the test phase now!**
+**The test phase has finished now. the leaderboard will be published soon.**
 
 <img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">
 
@@ -20,6 +20,13 @@ If you are interested in this shared task, please also [join our low-volume mail
 - **[Codalab competition for Subtask 2](https://codalab.lisn.upsaclay.fr/competitions/18008)**
 
 ---
+## Timeline
+- **February 4 2024** - training data published
+- **March 25 2024** - test data published
+- **April 9 2024** - deadline for submission of the systems’ predictions
+- **April 10 2024** - AXOLOTL'24 test results published
+- **May 10 2024** - paper submission deadline (same procedure as with other LChange'24 papers)
+
 
 ## Organizers
 - [Mariia Fedorova](https://www.mn.uio.no/ifi/english/people/aca/mariiaf/) (University of Oslo)
@@ -29,12 +36,7 @@ If you are interested in this shared task, please also [join our low-volume mail
 - [Janine Siewert](https://researchportal.helsinki.fi/en/persons/janine-siewert) (University of Helsinki)
 - [Elena Spaziani](https://phd.uniroma1.it/web/ELENA-SPAZIANI_nP1755394_EN.aspx) (Sapienza University Rome)
 
-## Timeline
-- **February 4 2024** - training data published
-- **March 25 2024** - test data published
-- **April 9 2024** - deadline for submission of the systems’ predictions
-- **April 10 2024** - AXOLOTL'24 test results published
-- **May 10 2024** - paper submission deadline (same procedure as with other LChange'24 papers)
+
 
 ## Introduction
 This shared task builds on the existing tradition of competitions in diachronic semantic change detection, like ([Schlechtweg et al 2020](https://aclanthology.org/2020.semeval-1.1/)) and many others. 
