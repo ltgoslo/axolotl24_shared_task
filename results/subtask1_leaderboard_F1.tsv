@@ -1,8 +1,8 @@
 Team	Fi-Ru-De	Fi-Ru	Fi-F1	Ru-F1	De-F1
-Holotniekat	0.633	0.645	0.63	0.66	0.61
-TartuNLP	0.59	0.595	0.55	0.64	0.58
-ABDN-NLP	0.487	0.58	0.59	0.57	0.3
-deep-change	0.39	0.37	0.39	0.35	0.43
-IMS_Stuttgart	0.213	0.0	0.0	0.0	0.64
+deep-change	0.750	0.753	0.756	0.75	0.745
+Holotniekat	0.641	0.658	0.655	0.661	0.608
+TartuNLP	0.590	0.595	0.55	0.64	0.58
+ABDN-NLP	0.487	0.580	0.59	0.57	0.3
+IMS_Stuttgart	0.431	0.328	0.655	0.0	0.638
+WooperNLP	0.316	0.475	0.503	0.446	0.0
 Baseline	0.207	0.245	0.23	0.26	0.13
-WooperNLP	0.09	0.135	0.1	0.17	0.0
