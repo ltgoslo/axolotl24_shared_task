@@ -1,0 +1,7 @@
+## Russian
+
+1. `axolotl.train.ru.tsv`: a training set of 1 912 Russian usages dated XIX century and 4 581 Russian modern usages, each mapped to a target headword, its sense ID, and a definition gloss in modern Russian (unlike in the Finnish data, some usage examples for the XIX century are missing or noisy)
+2. `axolotl.dev.ru.tsv`: a development set of 421 Russian usages dated XIX century and 1 605 Russian modern usages, each mapped to a target headword, its sense ID, and a definition gloss in modern Russian (unlike in the Finnish data, some usage examples for the XIX century are missing or noisy)
+3. `axolotl.test.ru.gold.tsv`: a test set of 424 Russian usages dated XIX century and 1 702 Russian modern usages, each mapped to a target headword, its sense ID, and a definition gloss in modern Russian (unlike in the Finnish data, some usage examples for the XIX century are missing or noisy)
+
+The data sources are Dahl V. (1909) Explanatory Dictionary of the Living Great Russian Language ed. by Boduen de Kurtene [Tolkovy slovar zhivogo velikorusskogo yazyka, pod red. I. A. Boduena de Kurtene] Saint Petersburg. for the old data and [CODWOE](https://aclanthology.org/2022.semeval-1.1/) (Mickus et al., SemEval 2022)  for the new data. We have used the [TEI-encoded version of the Dahl's Explantatory Dictionary](https://www.dialog-21.ru/media/4551/mikhaylovsaplusshershnevadm.pdf)(Mikhaylov and Shershneva, 2018) created by Liubov Polianskaia and Elena Shakurova.
