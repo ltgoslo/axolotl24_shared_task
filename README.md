@@ -58,7 +58,9 @@ The shared task consists of two subtasks. The participants are welcome to choose
 
 ## Subtask 1. Bridging diachronic word uses and a synchronic dictionary
 
-[Codalab competition for Subtask 1](https://codalab.lisn.upsaclay.fr/competitions/18009)
+[Codalab competition for Subtask 1 - development submissions](https://codalab.lisn.upsaclay.fr/competitions/18009)
+
+[Codalab competition for Subtask 1 - post-evaluation test submissions](https://codalab.lisn.upsaclay.fr/competitions/18570)
 
 The participants are offered two corpora, belonging to different time periods. In addition to this, they are provided with a set of **dictionary entries (sense inventories)** for the target words describing their senses in the **first** time period (accompanied by definitions). The task is to find usages of the target words belonging to **newly gained senses**, i.e., senses not covered by the provided sense inventory, as well as usages **belonging to the previously existing senses**.
 
@@ -73,7 +75,9 @@ The assumption is that sense definitions from the dictionary, even though not al
 
 ## Subtask 2. Definition generation for novel word senses.
 
-[Codalab competition for Subtask 2](https://codalab.lisn.upsaclay.fr/competitions/18008)
+[Codalab competition for Subtask 2 - development submissions](https://codalab.lisn.upsaclay.fr/competitions/18008)
+
+[Codalab competition for Subtask 2 - post-evaluation test submissions](https://codalab.lisn.upsaclay.fr/competitions/18572)
 
 This subtask challenges the participants to submit good **descriptions/definitions for the novel senses** they found in subtask 1. The definitions can be generated from scratch or retrieved from existing ontologies: this is completely up to the participants. The organizers will map the predicted definitions to the gold standard ones and evaluate their quality with the standard NLG metrics.
 
