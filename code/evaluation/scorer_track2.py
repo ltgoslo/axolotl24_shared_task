@@ -44,6 +44,7 @@ if len(words_sub & words_ref) == 0:
 else:
     # wrongfully included / omitted words penalty
     iou = len(words_sub & words_ref) / len(words_sub | words_ref)
+    coverage = len(words_sub & words_ref) / len(words_ref)
     bertscorer = evaluate.load("bertscore")
     bleuscorer = BLEU(effective_order=True, smooth_method='exp')  # default smoothing, but I'm being explicit
     words = words_sub & words_ref
@@ -83,6 +84,7 @@ else:
                 "bleu": (summed_bleuscores / 100) / norm,
                 "bertscore": summed_bertscores / norm,
                 "IoU": iou,
+                "Coverage (target words)": coverage,
                 "delta": abs(n_true - n_pred),
             }
         )
@@ -95,8 +97,11 @@ else:
 
 if verbose:
     import pprint
-
     pprint.pprint(scores)
+    pprint.pprint("Reference target words with new senses:")
+    print(sorted(words_ref))
+    pprint.pprint("Submitted target words with new senses:")
+    print(sorted(words_sub))
 
 with open(args.output, "w") as ostr:
     print(f"BLEU: {scores['bleu']:0.3f}", file=ostr)
