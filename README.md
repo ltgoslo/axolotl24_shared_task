@@ -26,7 +26,7 @@ If you are interested in this shared task, please also [join our low-volume mail
 - **March 25 2024** - test data published
 - **April 9 2024** - deadline for submission of the systems’ predictions
 - **April 10 2024** - AXOLOTL'24 test results published
-- **May 10 2024** - paper submission deadline (same procedure as with other LChange'24 papers)
+- ~~May 10 2024~~ **May 17 2024** - **Deadline extended** paper submission deadline (same procedure as with other LChange'24 papers). The questions on paper submission process (OpenReview technical problems, page number etc.) are better to be directed to LChange'24 organizers(lchange@changeiskey.org) .
 
 
 ## Organizers
