@@ -2,7 +2,7 @@
 
 This directory contain the Finnish and Russian test data for the AXOLOTL shared task. 
 
-The German test data `axolotl.test.surprise.tsv` are derived from the DWUG DE Sense dataset and can be downloaded from its [webpage](https://zenodo.org/records/12628143). Please cite this data as specified on that webpage.
+The German test data `axolotl.test.surprise.tsv` are derived from the DWUG DE Sense dataset and can be downloaded from its [webpage](https://zenodo.org/records/12628143). Please cite these data as specified on that webpage.
 
 **The deadline for submitting predictions is April 9, 2024**
 
