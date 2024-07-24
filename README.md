@@ -7,6 +7,8 @@ AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time
 This GitHub repository serves as the main information hub for AXOLOTL. 
 **The test phase has finished now. The leaderboards are [published](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/results).**
 
+**See the [shared task description paper](https://arxiv.org/abs/2407.04079)**
+
 <img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">
 
 If you are interested in this shared task, please also [join our low-volume mailing list on Google Groups](https://groups.google.com/g/axolotl-24/about).
@@ -93,6 +95,18 @@ This subtask challenges the participants to submit good **descriptions/definitio
 4. [Semeval-2022 Task 1: CODWOE – Comparing Dictionaries and Word Embeddings](https://aclanthology.org/2022.semeval-1.1/) (Mickus et al., SemEval 2022)
 5. [Interpretable Word Sense Representations via Definition Generation: The Case of Semantic Change Analysis](https://aclanthology.org/2023.acl-long.176/) (Giulianelli et al., ACL 2023)
 
+## Citation
+```
+@misc{fedorova2024axolotl24sharedtaskmultilingual,
+      title={AXOLOTL'24 Shared Task on Multilingual Explainable Semantic Change Modeling}, 
+      author={Mariia Fedorova and Timothee Mickus and Niko Partanen and Janine Siewert and Elena Spaziani and Andrey Kutuzov},
+      year={2024},
+      eprint={2407.04079},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2407.04079}, 
+}
+```
 ---
 
 _[5th International Workshop on Computational Approaches to Historical Language Change 2024 (LChange'24)](https://www.changeiskey.org/event/2024-acl-lchange/), August 15, 2024, Bangkok, Thailand_
