@@ -13,7 +13,7 @@ def main():
         ff = p.name.split('.')
         mdf['method'] = ff[0]
         mdf['lang'] = ff[1]
-        mdf['part'] = 'test'
+        mdf['part'] = ff[2]
         dfs.append(mdf)
 
     mdf = pd.concat(dfs, ignore_index=True)

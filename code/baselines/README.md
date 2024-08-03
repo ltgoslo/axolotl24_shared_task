@@ -45,12 +45,17 @@ clustering may be done better, the best cluster embedding may be not that of the
 Feel free also to abandon this baseline at all and use methods other than calculating similarity between transformer-based sentence embeddings.
 
 ## WSD baselines for track 1
+The following baselines annotate each usage of a word with one of its old senses.
+- random_old_sense: for each new word usage a random sense is sampled from the uniform distribution over senses of old usages of this word;
+- mfs_old_sense: for each target word the most frequent sense of its old usages is assigned to each of its new usages, 
+in case of ties one of the most frequent senses is randomly selected first, then assigned to all new usages.
+
+### Running WSD baselines
 ```commandline
 cd scripts/baselines/
 ./run_wsdbaselines.sh
 ```
-runs two baselines that are standard for WSD. The random baseline randomly assigns one of the old senses to each new usage. The MFS baseline assigns the most frequent old sense to each new usage. Frequencies are estimated on old usages, which already have sense labels in the input data. In case of ties, one of the most frequent senses for each word is randomly selected first, then it is used for all uses of this word.
-
+### Results of the WSD baselines 
 The [results](wsdbaselines.scores.tsv) of WSD baselines is in the following format: "mean+-std (#trials)".
 
 

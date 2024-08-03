@@ -10,16 +10,28 @@ if ! [ -f ../../data/german/axolotl.test.ge.gold.tsv  ]; then
   cd -
 fi
 
+for part in dev test; do
 for lang in finnish russian german; do
 for baseline in random_old_sense mfs_old_sense; do
 
-seq 100 | parallel -j 100 \
- "python3 wsdbaselines_track1.py ../../data/${lang}/axolotl.test.${lang:0:2}.gold.tsv pred_{}.tsv ${baseline} --seed={} &&\
-  python3 ../evaluation/scorer_track1.py --gold ../../data/${lang}/axolotl.test.${lang:0:2}.gold.tsv --pred pred_{}.tsv --output scores_{}.tsv"
+if [[ "$part" == "dev" && "$lang" == "german" ]]; then
+  continue
+fi
 
-cat scores_*.tsv >${baseline}.${lang}.scores.tsv
+if [[ "$part" == "test" ]]; then
+  finp=../../data/${lang}/axolotl.${part}.${lang:0:2}.gold.tsv
+else
+  finp=../../data/${lang}/axolotl.${part}.${lang:0:2}.tsv
+fi
+
+seq 100 | parallel -j 100 \
+ "python3 wsdbaselines_track1.py $finp pred_{}.tsv ${baseline} --seed={} &&\
+  python3 ../evaluation/scorer_track1.py --gold $finp --pred pred_{}.tsv --output scores_{}.tsv"
+
+cat scores_*.tsv >${baseline}.${lang}.${part}.scores.tsv
 rm pred*.tsv scores*.tsv
 
+done
 done
 done
 
