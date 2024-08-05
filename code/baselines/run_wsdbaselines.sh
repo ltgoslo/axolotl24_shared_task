@@ -25,7 +25,7 @@ else
 fi
 
 seq 100 | parallel -j 100 \
- "python3 wsdbaselines_track1.py $finp pred_{}.tsv ${baseline} --seed={} &&\
+ "python3 wsdbaselines_track1.py --test $finp --pred pred_{}.tsv --baseline_name ${baseline} --seed={} &&\
   python3 ../evaluation/scorer_track1.py --gold $finp --pred pred_{}.tsv --output scores_{}.tsv"
 
 cat scores_*.tsv >${baseline}.${lang}.${part}.scores.tsv

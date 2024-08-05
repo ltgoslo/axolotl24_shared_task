@@ -1,4 +1,5 @@
-import fire
+import argparse
+
 import pandas as pd
 import numpy as np
 import sys
@@ -25,4 +26,5 @@ def main():
     results.columns = [f'{c2}-{c1}' for c1, c2 in results.columns]
     results.to_csv('wsdbaselines.scores.tsv', sep='\t', index=True)
 
-fire.Fire(main)
+if __name__ == "__main__":
+    main()

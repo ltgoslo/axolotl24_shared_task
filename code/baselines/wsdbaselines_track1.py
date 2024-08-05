@@ -1,4 +1,4 @@
-import fire
+import argparse
 import pandas as pd
 import numpy as np
 import sys
@@ -20,7 +20,8 @@ def mfs_old_sense(df, seed):
     return pdf
 
 
-def main(ftest, fpred, baseline_name='mfs_old_sense', seed=2024):
+
+def run_baseline(ftest, fpred, baseline_name='mfs_old_sense', seed=2024):
     """
     Randomly assign one of the old senses to each new usage.
     :param ftest: input file
@@ -33,4 +34,19 @@ def main(ftest, fpred, baseline_name='mfs_old_sense', seed=2024):
     pdf.to_csv(fpred, sep="\t", index=False)
 
 
-fire.Fire(main)
+def parse_args():
+    parser = argparse.ArgumentParser()
+    arg = parser.add_argument
+    arg("--test", help="Path to the TSV file with the test data", required=True)
+    arg("--pred", help="Path to the TSV file with system predictions", required=True)
+    arg("--baseline_name", help="Baseline name: mfs_old_sense or random_old_sense", default="mfs_old_sense")
+    arg("--seed", help="random seed", type=int, default=2024)
+    return parser.parse_args()
+
+def main():
+    args = parse_args()
+    run_baseline(args.test, args.pred, args.baseline_name, args.seed)
+
+if __name__ == "__main__":
+    main()
+
