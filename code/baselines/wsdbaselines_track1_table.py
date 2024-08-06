@@ -8,7 +8,7 @@ from pathlib import Path
 
 def main():
     dfs = []
-    for p in Path('./').glob('*.scores.tsv'):
+    for p in Path('./baseline_scores').glob('*.scores.tsv'):
         mdf = pd.read_csv(p, sep=': +', header=None, engine='python')
         mdf.rename(columns={0: 'metric', 1: 'value'}, inplace=True)
         ff = p.name.split('.')
