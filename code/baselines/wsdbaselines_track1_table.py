@@ -18,8 +18,9 @@ def main():
         dfs.append(mdf)
 
     mdf = pd.concat(dfs, ignore_index=True)
-    results = mdf.groupby(['method', 'lang', 'part', 'metric']).value.agg(lambda r:
-                                                                          f'{np.mean(r):.3f}+-{np.std(r):.3f} ({len(r)})').reset_index()
+    results = mdf.groupby(['method', 'lang', 'part', 'metric']).value.agg(
+        lambda r: f'{np.mean(r):.3f}+-{np.std(r):.3f} ({len(r)})'
+    ).reset_index()
 
     results = results.pivot_table(index=['method', 'part'], columns=['metric', 'lang'], values='value',
                                   aggfunc=lambda r: ' '.join(r))
