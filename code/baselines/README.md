@@ -51,10 +51,11 @@ The following baselines annotate each usage of a word with one of its old senses
 in case of ties one of the most frequent senses is randomly selected first, then assigned to all new usages.
 
 ### Running WSD baselines
-Make sure GNU Parallel is installed in your system. If not check how to install it here: https://www.gnu.org/software/parallel/, or
+Make sure GNU Parallel and curl are installed in your system. If not check how to install it here: 
+https://www.gnu.org/software/parallel/, https://curl.se/, or
 if you use Ubuntu just run:
 ```commandline
-sudo apt install parallel 
+sudo apt install parallel curl
 ```
 The following scripts run each baseline on each dev and test set 100 times with different seeds in parallel, then 
 report the mean and the standard deviation of the official metrics across these runs. 
