@@ -1,7 +1,9 @@
 import argparse
-import pandas as pd
-import numpy as np
 import sys
+
+import numpy as np
+import pandas as pd
+
 
 def random_old_sense(pdf, seed):
     word2oldsenses = pdf[pdf.period == 'old'].groupby('word').sense_id.unique().to_dict()
