@@ -7,7 +7,7 @@ AXOLOTL-24 stands for "_Ascertain and eXplain Overhauls of the Lexicon Over Time
 This GitHub repository serves as the main information hub for AXOLOTL. 
 **The test phase has finished now. The leaderboards are [published](https://github.com/ltgoslo/axolotl24_shared_task/tree/main/results).**
 
-**See the [shared task description paper](https://arxiv.org/abs/2407.04079)**
+**See the [shared task description paper](https://aclanthology.org/2024.lchange-1.8/)**
 
 <img align="right" src="axolotl24.png" alt="Axolotl24" title="Axolotl24">
 
@@ -97,14 +97,29 @@ This subtask challenges the participants to submit good **descriptions/definitio
 
 ## Citation
 ```
-@misc{fedorova2024axolotl24sharedtaskmultilingual,
-      title={AXOLOTL'24 Shared Task on Multilingual Explainable Semantic Change Modeling}, 
-      author={Mariia Fedorova and Timothee Mickus and Niko Partanen and Janine Siewert and Elena Spaziani and Andrey Kutuzov},
-      year={2024},
-      eprint={2407.04079},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2407.04079}, 
+@inproceedings{fedorova-etal-2024-axolotl24,
+    title = "{AXOLOTL}{'}24 Shared Task on Multilingual Explainable Semantic Change Modeling",
+    author = "Fedorova, Mariia  and
+      Mickus, Timothee  and
+      Partanen, Niko  and
+      Siewert, Janine  and
+      Spaziani, Elena  and
+      Kutuzov, Andrey",
+    editor = "Tahmasebi, Nina  and
+      Montariol, Syrielle  and
+      Kutuzov, Andrey  and
+      Alfter, David  and
+      Periti, Francesco  and
+      Cassotti, Pierluigi  and
+      Huebscher, Netta",
+    booktitle = "Proceedings of the 5th Workshop on Computational Approaches to Historical Language Change",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.lchange-1.8",
+    pages = "72--91",
+    abstract = "",
 }
 ```
 ---
